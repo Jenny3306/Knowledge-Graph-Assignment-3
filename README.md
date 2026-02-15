@@ -248,16 +248,26 @@ int main() {
 
 using namespace std;
 
-// Assuming kg is a KnowledgeGraph that has been created and populated with entities
-// (see "Basic Knowledge Graph Operations" example above)
-
-// Breadth-First Search starting from "Python"
-string bfsTraversal = kg.bfs("Python");
-cout << "BFS Traversal: " << bfsTraversal << endl;
-
-// Depth-First Search starting from "Python"
-string dfsTraversal = kg.dfs("Python");
-cout << "DFS Traversal: " << dfsTraversal << endl;
+int main() {
+    KnowledgeGraph kg;
+    
+    // Build a sample graph
+    kg.addEntity("Python");
+    kg.addEntity("Java");
+    kg.addEntity("C++");
+    kg.addRelation("Python", "Java", 1.0);
+    kg.addRelation("Java", "C++", 1.0);
+    
+    // Breadth-First Search starting from "Python"
+    string bfsTraversal = kg.bfs("Python");
+    cout << "BFS Traversal: " << bfsTraversal << endl;
+    
+    // Depth-First Search starting from "Python"
+    string dfsTraversal = kg.dfs("Python");
+    cout << "DFS Traversal: " << dfsTraversal << endl;
+    
+    return 0;
+}
 ```
 
 ### Finding Common Ancestors
@@ -269,10 +279,28 @@ cout << "DFS Traversal: " << dfsTraversal << endl;
 
 using namespace std;
 
-// Assuming kg is a KnowledgeGraph that has been created and populated with entities
-// Find common ancestors between two entities
-string commonAncestors = kg.findCommonAncestors("Entity1", "Entity2");
-cout << "Common Ancestors: " << commonAncestors << endl;
+int main() {
+    KnowledgeGraph kg;
+    
+    // Build a hierarchical graph
+    kg.addEntity("Grandparent");
+    kg.addEntity("Parent1");
+    kg.addEntity("Parent2");
+    kg.addEntity("Child1");
+    kg.addEntity("Child2");
+    
+    // Create relationships
+    kg.addRelation("Grandparent", "Parent1", 1.0);
+    kg.addRelation("Grandparent", "Parent2", 1.0);
+    kg.addRelation("Parent1", "Child1", 1.0);
+    kg.addRelation("Parent2", "Child2", 1.0);
+    
+    // Find common ancestors between two children
+    string commonAncestors = kg.findCommonAncestors("Child1", "Child2");
+    cout << "Common Ancestors: " << commonAncestors << endl;
+    
+    return 0;
+}
 ```
 
 ## 🔬 Implementation Details
