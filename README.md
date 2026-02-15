@@ -194,6 +194,11 @@ The test suite includes:
 
 ```cpp
 #include "src/KnowledgeGraph.h"
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
 
 int main() {
     // Create a knowledge graph
@@ -235,6 +240,11 @@ int main() {
 ### Graph Traversal
 
 ```cpp
+#include <iostream>
+#include <string>
+
+using namespace std;
+
 // Breadth-First Search starting from "Python"
 string bfsTraversal = kg.bfs("Python");
 cout << "BFS Traversal: " << bfsTraversal << endl;
@@ -247,6 +257,10 @@ cout << "DFS Traversal: " << dfsTraversal << endl;
 ### Finding Common Ancestors
 
 ```cpp
+#include <iostream>
+#include <string>
+
+using namespace std;
 // Find common ancestors between two entities
 string commonAncestors = kg.findCommonAncestors("Entity1", "Entity2");
 cout << "Common Ancestors: " << commonAncestors << endl;
