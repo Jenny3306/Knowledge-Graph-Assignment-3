@@ -190,6 +190,8 @@ The test suite includes:
 
 ## 📖 Usage Examples
 
+> **Note**: The examples below use `using namespace std;` for simplicity. In production code, consider using explicit `std::` prefixes (e.g., `std::string`, `std::vector`) or scoped using declarations to avoid namespace pollution.
+
 ### Basic Knowledge Graph Operations
 
 ```cpp
@@ -240,10 +242,14 @@ int main() {
 ### Graph Traversal
 
 ```cpp
+#include "src/KnowledgeGraph.h"
 #include <iostream>
 #include <string>
 
 using namespace std;
+
+// Assuming kg is a KnowledgeGraph that has been created and populated with entities
+// (see "Basic Knowledge Graph Operations" example above)
 
 // Breadth-First Search starting from "Python"
 string bfsTraversal = kg.bfs("Python");
@@ -257,10 +263,13 @@ cout << "DFS Traversal: " << dfsTraversal << endl;
 ### Finding Common Ancestors
 
 ```cpp
+#include "src/KnowledgeGraph.h"
 #include <iostream>
 #include <string>
 
 using namespace std;
+
+// Assuming kg is a KnowledgeGraph that has been created and populated with entities
 // Find common ancestors between two entities
 string commonAncestors = kg.findCommonAncestors("Entity1", "Entity2");
 cout << "Common Ancestors: " << commonAncestors << endl;
