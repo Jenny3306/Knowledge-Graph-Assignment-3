@@ -10,6 +10,8 @@ main_memory
 *.exe
 main
 main_debug
+main_test
+main_memory
 *.a
 *.so
 *.dll
@@ -28,6 +30,9 @@ coverage-report/
 # doctest logs / temp
 # test_*
 *.log
+
+# doctest library (downloaded dependency)
+doctest/
 
 # =========================
 # OS / Editor / IDE files
