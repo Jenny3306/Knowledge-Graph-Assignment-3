@@ -2,8 +2,29 @@
 
 A C++ implementation of a Knowledge Graph data structure for Assignment 3 of the Data Structures and Algorithms (DSA) course at Ho Chi Minh City University of Technology (HCMUT).
 
+## 🚀 Quick Start
+
+```bash
+# Clone the repository
+git clone https://github.com/Jenny3306/Knowledge-Graph-Assignment-3.git
+cd Knowledge-Graph-Assignment-3
+
+# Download doctest header
+mkdir -p doctest
+curl -o doctest/doctest.h https://raw.githubusercontent.com/doctest/doctest/master/doctest/doctest.h
+
+# Compile the project
+g++ -std=c++11 -o main main.cpp src/KnowledgeGraph.cpp tests/helper.cpp \
+    tests/test_knowledgegraph.cpp tests/test_dgraph.cpp tests/test_LMS.cpp \
+    -I. -DTESTING
+
+# Run tests
+./main
+```
+
 ## 📋 Table of Contents
 
+- [Quick Start](#quick-start)
 - [Overview](#overview)
 - [Features](#features)
 - [Project Structure](#project-structure)
@@ -72,6 +93,23 @@ This project requires C++11 or later due to the use of:
 - `nullptr` keyword
 - Range-based for loops
 - Smart pointers
+
+### Setting Up doctest
+
+This project uses [doctest](https://github.com/doctest/doctest) for unit testing. You need to download the doctest header file before building:
+
+```bash
+# Create doctest directory
+mkdir -p doctest
+
+# Download doctest header (single-header library)
+curl -o doctest/doctest.h https://raw.githubusercontent.com/doctest/doctest/master/doctest/doctest.h
+
+# Alternative: using wget
+# wget -O doctest/doctest.h https://raw.githubusercontent.com/doctest/doctest/master/doctest/doctest.h
+```
+
+Or manually download `doctest.h` from the [doctest releases](https://github.com/doctest/doctest/releases) and place it in a `doctest/` directory in the project root.
 
 ## 🏗️ Building the Project
 
