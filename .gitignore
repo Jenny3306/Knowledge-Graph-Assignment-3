@@ -1,0 +1,48 @@
+main
+main_debug
+main_memory
+
+# =========================
+# Build & binary artifacts
+# =========================
+*.o
+*.out
+*.exe
+main
+main_debug
+*.a
+*.so
+*.dll
+
+# =========================
+# Coverage and test outputs
+# =========================
+*.gcda
+*.gcno
+*.gcov
+*.info
+coverage*
+coverage-report/
+*.html
+
+# doctest logs / temp
+# test_*
+*.log
+
+# =========================
+# OS / Editor / IDE files
+# =========================
+.DS_Store
+Thumbs.db
+# .vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+# Docker / Dev Containers
+# =========================
+# .devcontainer/
+*.tmp
+
+solution/
